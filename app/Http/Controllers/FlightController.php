@@ -19,6 +19,11 @@ class FlightController extends Controller
     {
         // Load the related tickets for the flight
         $flight->load('tickets');
-        return view('details', compact('flight'));
+
+        // ringkasan total penumpang dan yang sudah boarding:
+        $totalPassengers = $flight->tickets->count();
+        $boardedCount = $flight->tickets->where('is_boarding', true)->count();
+
+        return view('details', compact('flight', 'totalPassengers', 'boardedCount'));
     }
 }

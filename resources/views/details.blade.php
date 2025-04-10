@@ -10,6 +10,12 @@
 <p><strong>Waktu Berangkat:</strong> {{ $flight->departure_time }}</p>
 <p><strong>Waktu Tiba:</strong> {{ $flight->arrival_time }}</p>
 
+<div class="mt-4 bg-gray-100 p-4 rounded">
+    <h3 class="text-lg font-semibold mb-2">Ringkasan Tiket</h3>
+    <p>Total Penumpang: <strong>{{ $totalPassengers }}</strong></p>
+    <p>Sudah Boarding: <strong>{{ $boardedCount }}</strong></p>
+</div>
+
 <h3 class="text-xl font-semibold mt-6 mb-2">Daftar Tiket</h3>
 
 <table class="w-full text-sm text-left text-gray-700 border">
