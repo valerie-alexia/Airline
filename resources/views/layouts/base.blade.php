@@ -11,13 +11,13 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="bg-gray-50 text-gray-900">
+    <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
         {{-- Header --}}
         @include('components.header')
 
         {{-- Main Content --}}
-        <main class="container mx-auto py-8 px-4">
+        <main class="flex-grow container mx-auto py-8 px-4 ">
             @yield('content')
         </main>
 
